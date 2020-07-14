@@ -15,7 +15,7 @@ Le but de ce projet est de créer un jeu, inspiré des jeux de plateaux de l’u
 
 Le but du jeu est de faire avancer un personnage du début à la fin d’un plateau de jeu, en combattant des ennemis.
 
-*Le plateau de jeu
+-> Le plateau de jeu
 
 Le plateau de jeu est constitué de 64 cases dont une case 'Départ' et une case 'Arrivée' aux 2 extrémités du plateau. 
 
@@ -24,7 +24,7 @@ Chaque case peut soit être vide, soit contenir un ennemi à combattre, soit con
 NB : les cases Départ et Arrivée sont des cases vides.
 
 
-Les personnages
+-> Les personnages
 
 Au début de chaque partie, l’utilisateur choisit son personnage (guerrier ou magicien). Chaque type de personnage est caractérisé par les attributs suivants :
 
