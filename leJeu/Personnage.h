@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "Arm.h"
 
 class Personnage
 {
@@ -8,30 +9,37 @@ public:
 	Personnage();
 	Personnage(std::string name);
 	Personnage(std::string nomArme, int force, std::string name);
+	Personnage(Arm arm, std::string name);
 
 	//destructeur -> pour désallouer la mémoire en cas d'allocation dynamique (instanciation d'un objet Personnage via new)
 	~Personnage();
 
 	//Méthodes
-	void perdreVie(int forceEnnemi);
+	void loseLife(int forceEnnemi);
 
-	void attaquer(Personnage& cible);
+	void attack(Personnage& cible);
 
-	void gagnerVie(int pointVieSupp);
+	void winLife(int lifeSupp);
 
-	void changerArme(std::string nouvelleArme, int forceNouvelleArme);
+	void changeArm(std::string nameNewArm, int forceNewArm);
 
-	bool estVivant() const;
+	bool isAlive() const;
 
+	void display() const;
+
+	//Getter and setter
+	std::string getName() const;
+	int getLife() const;
+	int getLifeMax() const;
+	Arm getArm() const;
 
 	//Atributs
 private:
 
 	std::string m_name;
-	int m_vie;
-	int m_vieMax;
-	int m_force;
-	std::string m_nomArme;
+	int m_life;
+	int m_lifeMax;
+	Arm m_arm;
 
 };
 

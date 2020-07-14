@@ -16,6 +16,10 @@ public :
 	void changeArm(std::string name, int force);
 	void display() const;
 
+	//Getter and setter
+	int getForce() const;
+	std::string getName() const;
+
 private :
 	//Attributs
 	std::string m_name;

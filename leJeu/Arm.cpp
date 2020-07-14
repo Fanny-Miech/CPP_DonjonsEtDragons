@@ -25,3 +25,13 @@ void Arm::display() const
 {
 	cout << "Arme actuelle : " << m_name << " / Force : " << m_force << endl;
 }
+
+int Arm::getForce() const
+{
+	return m_force;
+}
+
+std::string Arm::getName() const
+{
+	return m_name;
+}
