@@ -45,7 +45,7 @@ Niveau de vie (3 - 6)
 Niveau d’attaque (8 - 15)
 
 
-Les équipements offensifs
+-> Les équipements offensifs
 
 Les armes/sorts sont caractérisés par un niveau d’attaque qui, lorsqu’ils sont utilisés, vont modifier le niveau d’attaque du personnage.
 
@@ -71,7 +71,7 @@ Potion de vie standard : rend 2 points de vie.
 Grande potion de vie : rend 5 points de vie.
 
 
-*Les ennemis
+-> Les ennemis
 
 Les personnages peuvent être confrontés à des ennemis au cours du jeu. Ces derniers ont différents points de vie et niveaux d’attaque :
 
@@ -105,7 +105,7 @@ o   Ou se battre.
 
 
 
-Règle des combats
+-> Règle des combats
 
 Le personnage frappe l’ennemi avec la force définie par son équipement (arme ou sort), le niveau de vie de l’ennemi diminue en conséquence.
 
@@ -119,7 +119,7 @@ Note : Le niveau de vie d’un même ennemi (sur une même case) doit être pers
 
 
 
-Fin de partie
+-> Fin de partie
 
 La partie est gagnée si le joueur arrive sur la dernière case du plateau ou en sort. 
 
