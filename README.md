@@ -97,7 +97,7 @@ o   Équipement : le bonus est appliqué au personnage,
 
 o   Potions : Le personnage récupère le nombre de points de vie défini par le type de potion.
 
--    Si la nouvelle case atteinte contient un ennemi 
+-       Si la nouvelle case atteinte contient un ennemi 
 
 o   Fuir -> reculer d'un nombre de cases aléatoire entre 1 et 6,
 
