@@ -1,21 +1,24 @@
 # CPP_DonjonsEtDragons
 
-Le jeu “Donjons et Dragons”
-
+PROJET DE JEU “Donjons et Dragons”
 =
-  Introduction
+Introduction
 =
+Juillet 2020
 
+Bonjour :smile: !
 Le but de ce projet est de créer un jeu, inspiré des jeux de plateaux de l’univers « Donjons et Dragons », en utilisant le langage C++. 
 
+Je suis aujourd'hui étudiante au Campus Numerique In The Alps et je prépare un diplôme de technicien développeur. Suite à la conjoncture sanitaire actuelle, due au Covid-19, je commencerai mon alternance au mois de septembre. Ce projet, qui reprend le sujet du module java de la formation, a pour objectif personnel la manipulation du C++ avant d'entrer en entreprise.
 
-=
-  Règles du jeu
+Le programme est actuellement en cours de réalisation :woman_factory_worker:.
+
+Règles du jeu
 =
 
 Le but du jeu est de faire avancer un personnage du début à la fin d’un plateau de jeu, en combattant des ennemis.
 
--> Le plateau de jeu
+-     Le plateau de jeu
 
 Le plateau de jeu est constitué de 64 cases dont une case 'Départ' et une case 'Arrivée' aux 2 extrémités du plateau. 
 
@@ -24,11 +27,11 @@ Chaque case peut soit être vide, soit contenir un ennemi à combattre, soit con
 NB : les cases Départ et Arrivée sont des cases vides.
 
 
--> Les personnages
+-     Les personnages
 
 Au début de chaque partie, l’utilisateur choisit son personnage (guerrier ou magicien). Chaque type de personnage est caractérisé par les attributs suivants :
 
-- Guerrier :
+-> Guerrier :
 
 Nom
 
@@ -36,7 +39,7 @@ Niveau de vie (5 par défaut - 10 max)
 
 Force d’attaque (5- 10)
 
-- Magicien :
+-> Magicien :
 
 Nom
 
@@ -45,7 +48,7 @@ Niveau de vie (3 - 6)
 Niveau d’attaque (8 - 15)
 
 
--> Les équipements offensifs
+-     Les équipements offensifs
 
 Les armes/sorts sont caractérisés par un niveau d’attaque qui, lorsqu’ils sont utilisés, vont modifier le niveau d’attaque du personnage.
 
@@ -53,15 +56,15 @@ On proposera dans cette première version du jeu, les équipements offensifs dé
 
 Les armes (spécifiques au guerrier) :
 
--   	Massue :  augmente l’attaque de 3 points
+->  Massue :  augmente l’attaque de 3 points
 
--   	Epée : augmente l’attaque de 5 points
+->  Epée : augmente l’attaque de 5 points
 
 Les sorts (spécifiques au magicien) :
 
--   	Eclair:  augmente l’attaque de 2 points.
+->  Eclair:  augmente l’attaque de 2 points.
 
--   	Boule de feu :  augmente l’attaque de 7 points.
+-> Boule de feu :  augmente l’attaque de 7 points.
 
 
 Les potions (utilisables par tous les personnages) :
@@ -71,7 +74,7 @@ Potion de vie standard : rend 2 points de vie.
 Grande potion de vie : rend 5 points de vie.
 
 
--> Les ennemis
+-     Les ennemis
 
 Les personnages peuvent être confrontés à des ennemis au cours du jeu. Ces derniers ont différents points de vie et niveaux d’attaque :
 
@@ -82,30 +85,28 @@ Les sorciers : 9 points de vie, 2 points d’attaque.
 Les dragons : 15 points de vie, 4 points d’attaque. 
 
 
-
-=
-  Déroulement du jeu
+Déroulement du jeu
 =
 
 Ce jeu se déroule en mode tour par tour. À chaque tour, le joueur va lancer un dé virtuel à 6 faces afin de connaître le nombre de cases dont il avance
 
--       Si la nouvelle case atteinte est vide : on passe au tour suivant.
+->  Si la nouvelle case atteinte est vide : on passe au tour suivant.
 
--       Si la nouvelle case contient une caisse surprise :
+->  Si la nouvelle case contient une caisse surprise :
 
 o   Équipement : le bonus est appliqué au personnage,
 
 o   Potions : Le personnage récupère le nombre de points de vie défini par le type de potion.
 
--       Si la nouvelle case atteinte contient un ennemi 
+->  Si la nouvelle case atteinte contient un ennemi 
 
-o   Fuir -> reculer d'un nombre de cases aléatoire entre 1 et 6,
+o   Fuir : reculer d'un nombre de cases aléatoire entre 1 et 6,
 
 o   Ou se battre.
 
 
 
--> Règle des combats
+-     Règle des combats
 
 Le personnage frappe l’ennemi avec la force définie par son équipement (arme ou sort), le niveau de vie de l’ennemi diminue en conséquence.
 
@@ -119,7 +120,7 @@ Note : Le niveau de vie d’un même ennemi (sur une même case) doit être pers
 
 
 
--> Fin de partie
+-     Fin de partie
 
 La partie est gagnée si le joueur arrive sur la dernière case du plateau ou en sort. 
 
