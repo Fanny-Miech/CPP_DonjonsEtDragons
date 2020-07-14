@@ -31,21 +31,9 @@ NB : les cases Départ et Arrivée sont des cases vides.
 
 Au début de chaque partie, l’utilisateur choisit son personnage (guerrier ou magicien). Chaque type de personnage est caractérisé par les attributs suivants :
 
--> Guerrier :
+-> :superhero: Guerrier : Nom  /  Niveau de vie (5 par défaut - 10 max)  /  Force d’attaque (5- 10)
 
-Nom
-
-Niveau de vie (5 par défaut - 10 max)
-
-Force d’attaque (5- 10)
-
--> Magicien :
-
-Nom
-
-Niveau de vie (3 - 6)
-
-Niveau d’attaque (8 - 15)
+-> :mage: Magicien : Nom  /  Niveau de vie (3 - 6)  /  Niveau d’attaque (8 - 15)
 
 
 -     Les équipements offensifs
@@ -54,31 +42,30 @@ Les armes/sorts sont caractérisés par un niveau d’attaque qui, lorsqu’ils 
 
 On proposera dans cette première version du jeu, les équipements offensifs décrits ci-dessous :
 
-Les armes (spécifiques au guerrier) :
+-> Les armes (spécifiques au guerrier) :
 
-->  Massue :  augmente l’attaque de 3 points
+o  :poultry_leg: Massue :  augmente l’attaque de 3 points
 
-->  Epée : augmente l’attaque de 5 points
+o  :axe: Hache : augmente l’attaque de 5 points
 
-Les sorts (spécifiques au magicien) :
+-> Les sorts (spécifiques au magicien) :
 
-->  Eclair:  augmente l’attaque de 2 points.
+o  :zap: Eclair :  augmente l’attaque de 2 points.
 
--> Boule de feu :  augmente l’attaque de 7 points.
+o :fire: Boule de feu :  augmente l’attaque de 7 points.
 
+-> Les potions (utilisables par tous les personnages) :
 
-Les potions (utilisables par tous les personnages) :
+o :beverage_box: Potion de vie standard : rend 2 points de vie.
 
-Potion de vie standard : rend 2 points de vie.
-
-Grande potion de vie : rend 5 points de vie.
+o :beer: Grande potion de vie : rend 5 points de vie.
 
 
 -     Les ennemis
 
 Les personnages peuvent être confrontés à des ennemis au cours du jeu. Ces derniers ont différents points de vie et niveaux d’attaque :
 
-Les gobelins: 6 points de vie, 1 point d’attaque.
+Les gobelins : 6 points de vie, 1 point d’attaque.
 
 Les sorciers : 9 points de vie, 2 points d’attaque.
 
@@ -94,15 +81,15 @@ Ce jeu se déroule en mode tour par tour. À chaque tour, le joueur va lancer un
 
 ->  Si la nouvelle case contient une caisse surprise :
 
-o   Équipement : le bonus est appliqué au personnage,
+o   :muscle: Équipement : le bonus est appliqué au personnage,
 
-o   Potions : Le personnage récupère le nombre de points de vie défini par le type de potion.
+o   :droplet: Potions : Le personnage récupère le nombre de points de vie défini par le type de potion.
 
 ->  Si la nouvelle case atteinte contient un ennemi 
 
-o   Fuir : reculer d'un nombre de cases aléatoire entre 1 et 6,
+o   :runner: Fuir : reculer d'un nombre de cases aléatoire entre 1 et 6,
 
-o   Ou se battre.
+o   :wrestling: Ou se battre.
 
 
 
@@ -122,7 +109,7 @@ Note : Le niveau de vie d’un même ennemi (sur une même case) doit être pers
 
 -     Fin de partie
 
-La partie est gagnée si le joueur arrive sur la dernière case du plateau ou en sort. 
+:trophy: La partie est gagnée si le joueur arrive sur la dernière case du plateau ou en sort. 
 
-La partie est perdue si le joueur a perdu tous ses points de vie.
+:skull: La partie est perdue si le joueur a perdu tous ses points de vie.
 
