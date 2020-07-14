@@ -2,14 +2,16 @@
 
 Le jeu “Donjons et Dragons”
 
-
-Introduction
+=================
+  INTRODUCTION
+=================
 
 Le but de ce projet est de créer un jeu, inspiré des jeux de plateaux de l’univers « Donjons et Dragons », en utilisant le langage C++. 
 
 
-
-REGLES DU JEU
+==================
+  REGLES DU JEU
+==================
 
 Le but du jeu est de faire avancer un personnage du début à la fin d’un plateau de jeu, en combattant des ennemis.
 
@@ -81,8 +83,9 @@ Les dragons : 15 points de vie, 4 points d’attaque.
 
 
 
-
-DEROULEMENT DU JEU
+=======================
+  DEROULEMENT DU JEU
+=======================
 
 Ce jeu se déroule en mode tour par tour. À chaque tour, le joueur va lancer un dé virtuel à 6 faces afin de connaître le nombre de cases dont il avance
 
