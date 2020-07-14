@@ -1,24 +1,24 @@
 #include "Personnage.h"
+#include <string>
 
 using namespace std;
 
-Personnage::Personnage()
+Personnage::Personnage() : m_vie(30), m_force(50), m_nomArme("Poing américain"), m_vieMax(100), m_name("Zorro") // liste d'initialisation des attributs
 {
-	m_vie = 3;
-	m_force = 5;
-	m_nomArme = "A mains nues";
-	m_vieMax = 10;
-	m_name = "Zorro";
 }
 
-Personnage::Personnage(std::string name)
+Personnage::Personnage(string name) : m_vie(30), m_force(50), m_nomArme("Poing américain"), m_vieMax(100), m_name(name)
 {
-	m_vie = 3;
-	m_force = 5;
-	m_nomArme = "A mains nues";
-	m_vieMax = 10;
-	m_name = name;
 }
+
+Personnage::Personnage(string nomArme, int force, string name) : m_vie(30), m_force(force), m_nomArme(nomArme), m_vieMax(100), m_name(name)
+{
+}
+
+Personnage::~Personnage()
+{
+}
+
 
 void Personnage::perdreVie(int forceEnnemi) {
 	m_vie -= forceEnnemi;
@@ -44,7 +44,7 @@ void Personnage::changerArme(string nouvelleArme, int forceNouvelleArme) {
 	m_force = forceNouvelleArme;
 }
 
-bool Personnage::estVivant() {
+bool Personnage::estVivant() const {
 	return m_vie > 0;
 }
 

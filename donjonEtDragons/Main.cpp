@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
     cout << "DONJON ET DRAGONS" << endl;
-    Personnage david, goliath;
+    Personnage david("David"), goliath("épée éguisée", 70, "Goliath");
     //Création de 2 objets de type Personnage : david et goliath
 
     goliath.attaquer(david);    //goliath attaque david
@@ -14,7 +14,7 @@ int main() {
     goliath.attaquer(david);    //goliath réattaque david
     david.attaquer(goliath);    //david contre-attaque... c'est assez clair non ?
 
-    goliath.changerArme("Double hache tranchante vénéneuse de la mort", 40);
+    goliath.changerArme("Double hache tranchante vénéneuse de la mort", 80);
     goliath.attaquer(david);
 
     string rejouer;

@@ -7,6 +7,10 @@ public:
 	//Constructeurs
 	Personnage();
 	Personnage(std::string name);
+	Personnage(std::string nomArme, int force, std::string name);
+
+	//destructeur -> pour désallouer la mémoire en cas d'allocation dynamique (instanciation d'un objet Personnage via new)
+	~Personnage();
 
 	//Méthodes
 	void perdreVie(int forceEnnemi);
@@ -17,7 +21,7 @@ public:
 
 	void changerArme(std::string nouvelleArme, int forceNouvelleArme);
 
-	bool estVivant();
+	bool estVivant() const;
 
 
 	//Atributs
