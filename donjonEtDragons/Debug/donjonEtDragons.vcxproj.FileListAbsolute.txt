@@ -1,4 +1,0 @@
-C:\Users\fanou\Documents\2019-CampusNumérique\cours\c++\donjonEtDragons\Debug\donjonEtDragons.exe
-C:\Users\fanou\Documents\2019-CampusNumérique\cours\c++\donjonEtDragons\Debug\donjonEtDragons.pdb
-C:\Users\fanou\Documents\2019-CampusNumérique\cours\c++\CPP_DonjonsEtDragons\donjonEtDragons\Debug\donjonEtDragons.exe
-C:\Users\fanou\Documents\2019-CampusNumérique\cours\c++\CPP_DonjonsEtDragons\donjonEtDragons\Debug\donjonEtDragons.pdb
