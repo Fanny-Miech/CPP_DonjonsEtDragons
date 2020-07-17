@@ -1,15 +1,21 @@
 #pragma once
 
+class Display {
 
+public :
 	/**
 * \brief : fonction qui affiche 'bienvenue sur le plateau de donjons et dragons'
 */
-	void welcome();
+	static void welcome();
 
 
 	/**
 	* \brief : fonction qui affiche 'A bientôt sur le plateau de donjons et dragons'
 	*/
-	void goodBye();
+	static void goodBye();
+
+
+};
+
 
 

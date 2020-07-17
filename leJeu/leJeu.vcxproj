@@ -141,15 +141,19 @@
   <ItemGroup>
     <ClCompile Include="Arm.cpp" />
     <ClCompile Include="display.cpp" />
+    <ClCompile Include="Mage.cpp" />
     <ClCompile Include="Personnage.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="playGame.cpp" />
+    <ClCompile Include="Warrior.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arm.h" />
     <ClInclude Include="display.h" />
+    <ClInclude Include="Mage.h" />
     <ClInclude Include="Personnage.h" />
     <ClInclude Include="playGame.h" />
+    <ClInclude Include="Warrior.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

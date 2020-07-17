@@ -98,6 +98,7 @@ void Personnage::display() const
 }
 
 
+
 Personnage& Personnage::operator=(Personnage const& persoCopy)
 {
 	if (this != &persoCopy) //On vérifie que l'objet n'est pas le même que celui reçu en argument

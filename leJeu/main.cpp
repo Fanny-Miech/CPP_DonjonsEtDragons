@@ -9,8 +9,9 @@ using namespace std;
 int main() {
     PlayGame newPart;
     
-    welcome();
+    Display::welcome();
     newPart.playGame();
-    goodBye();
+    Display::goodBye();
+
     return 0;
 }
