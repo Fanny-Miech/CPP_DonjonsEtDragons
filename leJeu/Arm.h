@@ -13,7 +13,6 @@ public :
 	~Arm();
 
 	//Méthodes
-	void changeArm(std::string name, int force);
 	void display() const;
 
 	//Getter and setter

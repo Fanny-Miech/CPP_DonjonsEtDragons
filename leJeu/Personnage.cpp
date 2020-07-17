@@ -3,25 +3,53 @@
 
 using namespace std;
 
-Personnage::Personnage() : m_life(3), m_arm(Arm()), m_lifeMax(10), m_name("Zorro") // liste d'initialisation des attributs
+//===================================================================
+//						Constructeurs
+//===================================================================
+
+Personnage::Personnage() 
+	: m_life(3), m_arm(0), m_lifeMax(10), m_name("Zorro") // liste d'initialisation des attributs
 {
+	m_arm = new Arm();
 }
 
-Personnage::Personnage(string name) : m_life(3), m_arm(Arm()), m_lifeMax(10), m_name(name)
+Personnage::Personnage(string name) 
+	: m_life(3), m_arm(0), m_lifeMax(10), m_name(name)
 {
+	m_arm = new Arm();
 }
 
-Personnage::Personnage(string nomArme, int force, string name) : m_life(3), m_arm(nomArme, force), m_lifeMax(10), m_name(name)
+Personnage::Personnage(string nameArm, int forceArm, string name) 
+	: m_life(3), m_arm(0), m_lifeMax(10), m_name(name)
 {
+	m_arm = new Arm(nameArm, forceArm);
 }
 
-Personnage::Personnage(Arm arm, std::string name) : m_life(3), m_arm(arm), m_lifeMax(10), m_name(name)
+Personnage::Personnage(Arm arm, std::string name) 
+	: m_life(3), m_arm(0), m_lifeMax(10), m_name(name)
 {
+	m_arm = new Arm(arm); //constructeur de copie -> copie tous les attributs de arm
 }
+
+//==================	Constructeur de copie	================
+
+Personnage::Personnage(Personnage const& persoCopy)
+	: m_name(persoCopy.m_name), m_life(persoCopy.m_life), m_lifeMax(persoCopy.m_lifeMax), m_arm(0)
+{
+	m_arm = new Arm(*(persoCopy.m_arm)); //on crée un pointeur vers une copie de l'arme
+}
+
+
+//==================	Destructeur		========================
 
 Personnage::~Personnage()
 {
+	delete m_arm;
 }
+
+//=================================================================
+//						Méthodes
+//=================================================================
 
 
 void Personnage::loseLife(int forceEnnemi) {
@@ -33,7 +61,7 @@ void Personnage::loseLife(int forceEnnemi) {
 }
 
 void Personnage::attack(Personnage& cible) {
-	cible.loseLife(m_arm.getForce()); //on inflige à la cible les dégâts que cause notre arme
+	cible.loseLife(m_arm->getForce()); //on inflige à la cible les dégâts que cause notre arme
 }
 
 void Personnage::winLife(int lifeSupp) {
@@ -44,7 +72,13 @@ void Personnage::winLife(int lifeSupp) {
 }
 
 void Personnage::changeArm(string nameNewArm, int forceNewArm) {
-	m_arm.changeArm(nameNewArm, forceNewArm);
+	delete m_arm;
+	m_arm = new Arm(nameNewArm, forceNewArm);
+}
+
+void Personnage::changeArm(Arm newArm) {
+	delete m_arm;
+	m_arm = new Arm(newArm);
 }
 
 bool Personnage::isAlive() const {
@@ -53,8 +87,34 @@ bool Personnage::isAlive() const {
 
 void Personnage::display() const
 {
-	cout << m_name << "  /  VIE : " << m_life << "  /  FORCE : " << m_arm.getForce() << endl;
+	cout 
+		<< "\n===============================================\n"
+		<< m_name 
+		<< "\nVIE : " << m_life 
+		<< "\nARME : "<< m_arm->getName() 
+		<<" (force : " << m_arm->getForce() <<")"
+		<< "\n===============================================\n"
+		<< endl;
 }
+
+
+Personnage& Personnage::operator=(Personnage const& persoCopy)
+{
+	if (this != &persoCopy) //On vérifie que l'objet n'est pas le même que celui reçu en argument
+	{
+		//On copie tous les champs
+		m_name = persoCopy.m_name;
+		m_life = persoCopy.m_life;
+		m_lifeMax = persoCopy.m_lifeMax;
+		delete m_arm; //on supprime le pointeur vers l'arme
+		m_arm = new Arm(*(persoCopy.m_arm)); // on assigne le pointeur à une copie de l'arme
+	}
+	return *this; //On renvoie l'objet lui-même
+}
+
+
+//==============	getter and setter	=====================================
+
 
 std::string Personnage::getName() const
 {
@@ -71,9 +131,9 @@ int Personnage::getLifeMax() const
 	return m_lifeMax;
 }
 
-Arm Personnage::getArm() const
+Arm* Personnage::getArmPtr() const
 {
-	return Arm(m_arm);
+	return m_arm;
 }
 
 

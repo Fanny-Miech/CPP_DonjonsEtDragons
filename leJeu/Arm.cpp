@@ -3,6 +3,10 @@
 
 using namespace std;
 
+//===============================================
+//			Constructeurs / Destructeur
+//================================================
+
 Arm::Arm() : m_name("Couteau suisse"), m_force(5)
 {
 }
@@ -15,16 +19,19 @@ Arm::~Arm()
 {
 }
 
-void Arm::changeArm(std::string name, int force)
-{
-	m_name = name;
-	m_force = force;
-}
+
+//=======================================================
+//				Méthodes
+//=======================================================
+
 
 void Arm::display() const
 {
 	cout << "Arme actuelle : " << m_name << " / Force : " << m_force << endl;
 }
+
+
+//==============	getter and setter	======================
 
 int Arm::getForce() const
 {

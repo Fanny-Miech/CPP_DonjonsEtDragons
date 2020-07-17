@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include "display.h"
+#include "Personnage.h"
 
 using namespace std;
 
@@ -14,6 +15,12 @@ void PlayGame::playGame()
 void PlayGame::play()
 {
 	cout << "Je joue :)\n";
+	Personnage *perso = new Personnage();
+	perso->display();
+	perso->changeArm("Hache double tranchant", 7);
+	perso->display();
+	delete perso;
+
 	//initPerso();
 	//partGo();
 }
@@ -22,7 +29,7 @@ void PlayGame::play()
 void PlayGame::replay()
 {
 	string response;
-	cout << "Voulez-vous rejouer ? (o/n)" << endl;
+	cout << "\nVoulez-vous rejouer ? (o/n)" << endl;
 	cin >> response;
 
 	if (response._Equal("o")) {
