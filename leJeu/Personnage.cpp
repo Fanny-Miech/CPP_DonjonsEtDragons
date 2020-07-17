@@ -8,28 +8,36 @@ using namespace std;
 //===================================================================
 
 Personnage::Personnage() 
-	: m_life(3), m_arm(0), m_lifeMax(10), m_name("Zorro") // liste d'initialisation des attributs
+	: m_name("Bibou"), m_arm(0), m_forceMax(10), m_life(3), m_lifeMax(10) // liste d'initialisation des attributs
 {
 	m_arm = new Arm();
 }
 
 Personnage::Personnage(string name) 
-	: m_life(3), m_arm(0), m_lifeMax(10), m_name(name)
+	: m_name(name), m_arm(0), m_forceMax(10), m_life(3), m_lifeMax(10)
 {
 	m_arm = new Arm();
 }
 
-Personnage::Personnage(string nameArm, int forceArm, string name) 
-	: m_life(3), m_arm(0), m_lifeMax(10), m_name(name)
+Personnage::Personnage(string name, string nameArm, int forceArm)
+	: m_name(name), m_arm(0), m_forceMax(10), m_life(3), m_lifeMax(10)
 {
 	m_arm = new Arm(nameArm, forceArm);
 }
 
-Personnage::Personnage(Arm arm, std::string name) 
-	: m_life(3), m_arm(0), m_lifeMax(10), m_name(name)
+Personnage::Personnage(std::string name, Arm arm)
+	: m_name(name), m_arm(0), m_forceMax(10), m_life(3), m_lifeMax(10)
 {
 	m_arm = new Arm(arm); //constructeur de copie -> copie tous les attributs de arm
 }
+
+Personnage::Personnage(std::string name, std::string armName, int force, int forceMax, int life, int lifeMax)
+	: m_name(name), m_arm(0), m_forceMax(forceMax), m_life(life), m_lifeMax(lifeMax)
+{
+	m_arm = new Arm(armName, force);
+}
+
+
 
 //==================	Constructeur de copie	================
 
@@ -88,7 +96,7 @@ bool Personnage::isAlive() const {
 void Personnage::display() const
 {
 	cout 
-		<< "\n===============================================\n"
+		<< "===============================================\n"
 		<< m_name 
 		<< "\nVIE : " << m_life 
 		<< "\nARME : "<< m_arm->getName() 

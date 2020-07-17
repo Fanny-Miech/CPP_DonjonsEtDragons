@@ -3,12 +3,12 @@
 
 using namespace std;
 
-Mage::Mage(string name) : Personnage(name)
+Mage::Mage(string name) : Personnage(name, "Brouillard enveloppant", 8, 15, 3, 6)
 {
 }
 
 void Mage::display() const
 {
-	cout << "	MAGICIEN" << endl;
+	cout << "\n===============================================\nMAGICIEN" << endl;
 	Personnage::display();
 }

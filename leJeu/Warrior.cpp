@@ -3,13 +3,13 @@
 
 using namespace std;
 
-Warrior::Warrior(std::string name) : Personnage(name)
+Warrior::Warrior(std::string name) : Personnage(name, "Epee rouillee", 5, 10, 5,10)
 {
 }
 
 void Warrior::display() const
 {
-	cout << "		WARRIOR" << endl;
+	cout << "\n===============================================\nWARRIOR" << endl;
 	Personnage::display();
 }
 

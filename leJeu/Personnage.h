@@ -11,8 +11,9 @@ public:
 
 	Personnage();
 	Personnage(std::string name);
-	Personnage(std::string nomArme, int force, std::string name);
-	Personnage(Arm arm, std::string name);
+	Personnage(std::string name, std::string nameArm, int forceArm);
+	Personnage(std::string name, Arm arm);
+	Personnage(std::string name, std::string armName, int force, int forceMax, int life, int lifeMax);
 
 	//Constructeur de copie
 	//-> existe par défaut mais ici nécessaire car m_arm est un pointeur
@@ -21,7 +22,7 @@ public:
 	Personnage(Personnage const& persoCopy);
 
 	//destructeur -> pour désallouer la mémoire en cas d'allocation dynamique (instanciation d'un objet Personnage via new)
-	~Personnage();
+	virtual ~Personnage();
 
 
 
@@ -29,19 +30,19 @@ public:
 	//					Méthodes
 	//====================================================
 
-	void loseLife(int forceEnnemi);
+	void virtual loseLife(int forceEnnemi);
 
-	void attack(Personnage& cible);
+	void virtual attack(Personnage& cible);
 
-	void winLife(int lifeSupp);
+	void virtual winLife(int lifeSupp);
 
-	void changeArm(std::string nameNewArm, int forceNewArm);
+	void virtual changeArm(std::string nameNewArm, int forceNewArm);
 
-	void changeArm(Arm newArm);
+	void virtual changeArm(Arm newArm);
 
-	bool isAlive() const;
+	bool virtual isAlive() const;
 
-	void display() const;
+	void virtual display() const;
 
 	//surcharge de 'operator='	
 	//va toujours de pair avec le constructeur de copie !!!
@@ -51,10 +52,10 @@ public:
 
 	//===============	Getter and setter	======================
 
-	std::string getName() const;
-	int getLife() const;
-	int getLifeMax() const;
-	Arm* getArmPtr() const;
+	virtual std::string getName() const;
+	virtual int getLife() const;
+	virtual int getLifeMax() const;
+	virtual Arm* getArmPtr() const;
 
 
 
@@ -65,9 +66,10 @@ public:
 protected:
 
 	std::string m_name;
+	Arm* m_arm;
+	int m_forceMax;
 	int m_life;
 	int m_lifeMax;
-	Arm *m_arm;
 
 };
 

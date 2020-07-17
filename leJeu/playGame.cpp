@@ -18,7 +18,9 @@ PlayGame::~PlayGame()
 }
 
 
-
+//========================================================
+//				Méthodes
+//========================================================
 
 void PlayGame::playGame()
 {
@@ -27,31 +29,21 @@ void PlayGame::playGame()
 }
 
 void PlayGame::play()
-{
-	//cout << "Je joue :)\n";
-	//Personnage *perso = new Personnage();
-	//perso->display();
-	//perso->changeArm("Hache double tranchant", 7);
-	//perso->display();
-	//delete perso;
-
-
-	//initPerso(); >>>> A creer : méthode dans personnage
-	
-	//*m_perso = m_perso->initPerso(); // avec initPerso() qui retourne un Perso
+{	
 	initPerso();
-	//m_perso = new Personnage();
 	m_perso->display();
 
 
-	//PartGo(&m_perso);  >>>>> class avec comme attributs un Personnage et un plateau de jeu
+	//Part newPart(m_perso);  >>>>> class Part
+	//-> attributs : un Personnage et un plateau de jeu 
+	//-> méthodes : part(){rollDice(); move(); interact(); if(isAlive) {part()}}
 }
 
 
 void PlayGame::replay()
 {
 	string response;
-	cout << "\nVoulez-vous rejouer ? (o/n)" << endl;
+	cout << "\nVeux-tu rejouer ? (o/n)" << endl;
 	cin >> response;
 
 	if (response._Equal("o")) {
@@ -68,21 +60,33 @@ void PlayGame::replay()
 void PlayGame::initPerso() {
 	string warrior("Warrior"), mage("Mage");
 
+	//On demande au joueur quel personnage Guerrier ou Magicien
 	cout << "Avec quel personnage veux-tu jouer ? \nGuerrier (1) \nMagicien (2)" << endl;
-	int response;
+	string response;
 	cin >> response;
 	cin.ignore();
 
-	cout << "Quel nom veux-tu lui donner ?" << endl;
-	string name;
-	cin >> name;
-	cin.ignore();
+	if (response._Equal("1") || response._Equal("2")) {
 
-	if (response == 1) {
-		m_perso = new Warrior(name);
-	}
-	else if (response == 2) {
-		m_perso = new Mage(name);
+		//on demande au joueur un nom pour son perso
+		cout << "Quel nom veux-tu lui donner ?" << endl;
+		string name;
+		cin >> name;
+		cin.ignore();
+
+		//Selon la réponse du joueur on instancie un guerrier ou un magicien
+		if (response._Equal("1")) {
+			//Warrior warrior(name);
+			//&warrior == static_cast<Warrior*>(m_perso);
+
+			m_perso = new Warrior(name);
+		}
+		else 
+			//Mage mage(name);
+			//&mage == static_cast<Mage*>(m_perso);
+
+			m_perso = new Mage(name);
+		
 	}
 	else initPerso();
 
