@@ -140,8 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Arm.cpp" />
+    <ClCompile Include="Board.cpp" />
     <ClCompile Include="display.cpp" />
     <ClCompile Include="Mage.cpp" />
+    <ClCompile Include="Part.cpp" />
     <ClCompile Include="Personnage.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="playGame.cpp" />
@@ -149,8 +151,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arm.h" />
+    <ClInclude Include="Board.h" />
     <ClInclude Include="display.h" />
     <ClInclude Include="Mage.h" />
+    <ClInclude Include="Part.h" />
     <ClInclude Include="Personnage.h" />
     <ClInclude Include="playGame.h" />
     <ClInclude Include="Warrior.h" />
