@@ -13,12 +13,14 @@ Part::~Part()
 
 void Part::part()
 {
+	m_board.m_board();
+	std::cout << "je commence une partie avec part()" << std::endl;
 	int dice = rollDice();
 	move(dice);
 	interact();
-	if (m_perso->isAlive()) {
+	/*if (m_perso->isAlive()) {
 		part();
-	}
+	}*/
 }
 
 int Part::rollDice()
@@ -45,7 +47,7 @@ void Part::interact()
 			-> interact()
 		-> goAway()
 			-> part() //avec nouvelle variable 'boolean goAway' à créer dans perso pour move négatif
-	-> default	
+	-> default	(EmptyEvent)
 	*/
 }
 

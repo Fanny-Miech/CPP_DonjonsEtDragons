@@ -15,6 +15,8 @@ public :
 	//Méthodes
 	void display() const;
 
+	void interact();
+
 	//Getter and setter
 	int getForce() const;
 	std::string getName() const;

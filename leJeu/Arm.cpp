@@ -1,5 +1,6 @@
 #include "Arm.h"
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -28,6 +29,11 @@ Arm::~Arm()
 void Arm::display() const
 {
 	cout << "Arme actuelle : " << m_name << " / Force : " << m_force << endl;
+}
+
+void Arm::interact()
+{
+	std::cout << "Je suis une arme" << endl;
 }
 
 

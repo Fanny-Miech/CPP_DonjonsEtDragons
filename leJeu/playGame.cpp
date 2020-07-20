@@ -5,6 +5,7 @@
 #include "Personnage.h"
 #include "Warrior.h"
 #include "Mage.h"
+#include "Part.h"
 
 using namespace std;
 
@@ -30,13 +31,13 @@ void PlayGame::playGame()
 
 void PlayGame::play()
 {	
+	//initialiser un nouveau perso
 	initPerso();
 	m_perso->display();
 
-
-	//Part newPart(m_perso);  >>>>> class Part
-	//-> attributs : un Personnage et un plateau de jeu 
-	//-> méthodes : part(){rollDice(); move(); interact(); if(isAlive) {part()}}
+	//lancer une partie de jeu
+	Part part(m_perso);
+	part.part();
 }
 
 

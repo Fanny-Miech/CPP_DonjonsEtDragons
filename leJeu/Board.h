@@ -1,5 +1,5 @@
 #pragma once
-#include <deque>
+#include <vector>
 #include <string>
 #include "Event.h"
 
@@ -10,7 +10,7 @@ public :
 	Board();
 	~Board();
 
-	std::deque<Event> m_board();
+	std::vector<Event> m_board();
 
 	//Event getEvent(int i);
 
