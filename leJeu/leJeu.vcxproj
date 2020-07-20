@@ -142,6 +142,8 @@
     <ClCompile Include="Arm.cpp" />
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="display.cpp" />
+    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="EventEmpty.cpp" />
     <ClCompile Include="Mage.cpp" />
     <ClCompile Include="Part.cpp" />
     <ClCompile Include="Personnage.cpp" />
@@ -153,6 +155,8 @@
     <ClInclude Include="Arm.h" />
     <ClInclude Include="Board.h" />
     <ClInclude Include="display.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="EventEmpty.h" />
     <ClInclude Include="Mage.h" />
     <ClInclude Include="Part.h" />
     <ClInclude Include="Personnage.h" />

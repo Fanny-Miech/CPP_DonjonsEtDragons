@@ -24,7 +24,7 @@ void Part::part()
 int Part::rollDice()
 {
 	std::srand(time(nullptr));
-	int dice = std::rand() % 5 + 1;
+	int dice = std::rand() % 6 + 1;
 	return dice;
 }
 

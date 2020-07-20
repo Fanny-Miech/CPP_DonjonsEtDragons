@@ -96,10 +96,10 @@ bool Personnage::isAlive() const {
 void Personnage::display() const
 {
 	cout 
-		<< "===============================================\n"
-		<< m_name 
+		<< "==============================================="
+		<<"\nNOM : " << m_name 
 		<< "\nVIE : " << m_life 
-		<< "\nARME : "<< m_arm->getName() 
+		<< "\nARME : " << m_arm->getName() 
 		<<" (force : " << m_arm->getForce() <<")"
 		<< "\n===============================================\n"
 		<< endl;
