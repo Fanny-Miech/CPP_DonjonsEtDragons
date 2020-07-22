@@ -7,7 +7,7 @@ public :
     EventEmpty();
     ~EventEmpty();
 
-    virtual void interact();
+    void interact();
 
 };
 

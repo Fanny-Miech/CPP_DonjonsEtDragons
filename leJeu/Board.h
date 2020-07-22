@@ -14,5 +14,8 @@ public :
 
 	//Event getEvent(int i);
 
+private :
+	int m_nbCase;
+
 };
 

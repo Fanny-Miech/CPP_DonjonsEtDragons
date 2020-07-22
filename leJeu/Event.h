@@ -1,10 +1,12 @@
 #pragma once
+
 class Event
 {
 public :
 	Event();
 	~Event();
 
-	void interact();
+	virtual void interact();
+	void interact(Event& event);
 };
 
