@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include "Event.h"
+#include <memory>
 
 
 class Board
@@ -10,7 +11,7 @@ public :
 	Board();
 	~Board();
 
-	std::vector<Event> m_board();
+	std::vector<std::unique_ptr<Event>> m_board();
 
 	//Event getEvent(int i);
 

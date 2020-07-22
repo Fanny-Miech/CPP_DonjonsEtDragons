@@ -3,10 +3,8 @@
 class Event
 {
 public :
-	Event();
-	~Event();
 
-	virtual void interact();
-	void interact(Event& event);
+	virtual void interact()=0;
+
 };
 
