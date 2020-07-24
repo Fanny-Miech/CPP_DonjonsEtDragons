@@ -1,8 +1,10 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include "Event.h"
 
-class Arm
+class Arm :
+	public Event
 {
 public :
 	//Constructeurs

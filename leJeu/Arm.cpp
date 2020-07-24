@@ -33,7 +33,7 @@ void Arm::display() const
 
 void Arm::interact()
 {
-	std::cout << "Je suis une arme" << endl;
+	std::cout << "ARME : " << m_name <<" (force : " << m_force << ")" << endl;
 }
 
 
