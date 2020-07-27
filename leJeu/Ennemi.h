@@ -1,10 +1,10 @@
 #pragma once
 #include "Event.h"
-#include "Personnage.h"
+//#include "Personnage.h"
 
 class Ennemi :
-    public Event,
-    public Personnage
+    public Event
+    //public Personnage
 {
 public: 
     Ennemi();
