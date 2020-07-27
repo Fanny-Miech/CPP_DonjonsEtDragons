@@ -7,6 +7,7 @@ public :
     EventEmpty();
     ~EventEmpty();
 
+    virtual void display() const;
     void interact();
 
 };

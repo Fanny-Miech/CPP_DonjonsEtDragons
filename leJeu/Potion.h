@@ -7,6 +7,7 @@ public:
     Potion();
     ~Potion();
 
+    virtual void display() const;
     void interact();
 };
 

@@ -8,6 +8,7 @@ public:
     Start(std::string name);
     ~Start();
 
+    virtual void display() const;
     void interact();
 private :
     std::string m_name;

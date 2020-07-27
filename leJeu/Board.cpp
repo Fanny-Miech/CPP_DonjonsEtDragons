@@ -165,6 +165,6 @@ void Board::displayBoard(std::vector<std::unique_ptr<Event>> const& board)
 	for (int i = 0; i < m_nbCase; ++i)
 	{
 		std::cout << "Case " << i << " : ";
-		board.at(i)->interact();
+		board.at(i)->display();
 	}
 }

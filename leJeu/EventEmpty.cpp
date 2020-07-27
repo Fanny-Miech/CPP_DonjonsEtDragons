@@ -11,6 +11,11 @@ EventEmpty::~EventEmpty()
 {
 }
 
+void EventEmpty::display() const
+{
+	cout << "Case vide" << endl;
+}
+
 void EventEmpty::interact()
 {
 	cout << "je suis une case vide" << endl;

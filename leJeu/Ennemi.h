@@ -7,6 +7,7 @@ public:
     Ennemi();
     ~Ennemi();
 
+    virtual void display() const;
     void interact();
 };
 

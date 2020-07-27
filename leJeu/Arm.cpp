@@ -28,7 +28,7 @@ Arm::~Arm()
 
 void Arm::display() const
 {
-	cout << "Arme actuelle : " << m_name << " / Force : " << m_force << endl;
+	std::cout << "ARME : " << m_name << " (force : " << m_force << ")" << endl;
 }
 
 void Arm::interact()
