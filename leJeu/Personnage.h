@@ -16,6 +16,7 @@ public:
 	Personnage(std::string name, std::string armName, int force, int forceMax, int life, int lifeMax);
 
 
+
 	//destructeur -> pour désallouer la mémoire en cas d'allocation dynamique (instanciation d'un objet Personnage via new)
 	virtual ~Personnage();
 
@@ -42,15 +43,15 @@ public:
 
 
 
+
 	//===============	Getter and setter	======================
 
 	virtual std::string getName() const;
 	virtual int getLife() const;
 	virtual int getLifeMax() const;
 	virtual Arm getArm() const;
-	virtual int getForce() const;
 
-	virtual void setArm(Arm);
+	int getForce() const;
 
 
 

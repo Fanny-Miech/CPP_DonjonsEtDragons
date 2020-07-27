@@ -119,8 +119,5 @@ int Personnage::getForce() const
 	return m_arm.getForce();
 }
 
-void Personnage::setArm(Arm arm)
-{
-	m_arm = arm;
-}
+
 
