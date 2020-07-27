@@ -11,7 +11,7 @@ Ennemi::~Ennemi()
 
 void Ennemi::display() const
 {
-	std::cout << "ENNEMI" << std::endl;
+	std::cout << "ENNEMI : " ;
 }
 
 void Ennemi::interact()

@@ -6,6 +6,9 @@
 #include "Ennemi.h"
 #include"Arm.h"
 #include "Potion.h"
+#include "Dragon.h"
+#include "Gobelin.h"
+#include "Sorcier.h"
 
 #include <vector>
 #include <ctime>
@@ -55,7 +58,7 @@ void Board::initBoard(std::vector<std::unique_ptr<Event>>& board)
 		case 52:
 		case 56:
 		case 62:
-			board.push_back(std::unique_ptr<Event>(new Ennemi()));
+			board.push_back(std::unique_ptr<Event>(new Dragon()));
 			break;
 			//cases avec Sorcier
 		case 10:
@@ -68,7 +71,7 @@ void Board::initBoard(std::vector<std::unique_ptr<Event>>& board)
 		case 40:
 		case 44:
 		case 47:
-			board.push_back(std::unique_ptr<Event>(new Ennemi()));
+			board.push_back(std::unique_ptr<Event>(new Sorcier()));
 			break;
 			// cases avec Gobelins
 		case 3:
@@ -81,7 +84,7 @@ void Board::initBoard(std::vector<std::unique_ptr<Event>>& board)
 		case 24:
 		case 27:
 		case 30:
-			board.push_back(std::unique_ptr<Event>(new Ennemi()));
+			board.push_back(std::unique_ptr<Event>(new Gobelin()));
 			break;
 			// cases avec Massue
 		case 2:

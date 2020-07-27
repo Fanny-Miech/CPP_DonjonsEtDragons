@@ -1,14 +1,14 @@
 #pragma once
-#include "Event.h"
+#include "Ennemi.h"
 #include "Personnage.h"
 
-class Ennemi :
-    public Event,
+class Gobelin :
+    public Ennemi,
     public Personnage
 {
-public: 
-    Ennemi();
-    ~Ennemi();
+public :
+    Gobelin();
+    ~Gobelin();
 
     virtual void display() const;
     virtual void interact();

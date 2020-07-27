@@ -142,15 +142,18 @@
     <ClCompile Include="Arm.cpp" />
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="display.cpp" />
+    <ClCompile Include="Dragon.cpp" />
     <ClCompile Include="Ennemi.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="EventEmpty.cpp" />
+    <ClCompile Include="Gobelin.cpp" />
     <ClCompile Include="Mage.cpp" />
     <ClCompile Include="Part.cpp" />
     <ClCompile Include="Personnage.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="playGame.cpp" />
     <ClCompile Include="Potion.cpp" />
+    <ClCompile Include="Sorcier.cpp" />
     <ClCompile Include="Start.cpp" />
     <ClCompile Include="Warrior.cpp" />
   </ItemGroup>
@@ -158,14 +161,17 @@
     <ClInclude Include="Arm.h" />
     <ClInclude Include="Board.h" />
     <ClInclude Include="display.h" />
+    <ClInclude Include="Dragon.h" />
     <ClInclude Include="Ennemi.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventEmpty.h" />
+    <ClInclude Include="Gobelin.h" />
     <ClInclude Include="Mage.h" />
     <ClInclude Include="Part.h" />
     <ClInclude Include="Personnage.h" />
     <ClInclude Include="playGame.h" />
     <ClInclude Include="Potion.h" />
+    <ClInclude Include="Sorcier.h" />
     <ClInclude Include="Start.h" />
     <ClInclude Include="Warrior.h" />
   </ItemGroup>
