@@ -6,6 +6,7 @@
 #include "Ennemi.h"
 #include"Arm.h"
 #include "Potion.h"
+#include "GrandePotion.h"
 #include "Dragon.h"
 #include "Gobelin.h"
 #include "Sorcier.h"
@@ -126,7 +127,7 @@ void Board::initBoard(std::vector<std::unique_ptr<Event>>& board)
 			// cases avec Grande Potion
 		case 28:
 		case 41:
-			board.push_back(std::unique_ptr<Event>(new Potion()));
+			board.push_back(std::unique_ptr<Event>(new GrandePotion()));
 			break;
 			// case d'arrivée
 		case 64:

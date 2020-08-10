@@ -11,10 +11,10 @@ Potion::~Potion()
 
 void Potion::display() const
 {
-	std::cout << "Potion" << std::endl;
+	std::cout << "PETITE Potion : +2 points de vie !" << std::endl;
 }
 
 void Potion::interact()
 {
-	std::cout << "Je suis une potion" << std::endl;
+	std::cout << "PETITE Potion : + 2 points de vie !" << std::endl;
 }
